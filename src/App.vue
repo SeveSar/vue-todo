@@ -1,9 +1,12 @@
 <template>
  <div class="todo">
    <AppHeader />
-    <div class="todo__body">
-      <AppFilter :filter="filter" @search="setSearchText" @filter-click="setFilterType" />
-      <AppList :data="filteredDate" />
+    <div class="wrap">
+      <div class="todo__body" v-if="!$store.getters['loading']">
+        <AppFilter :filter="filter" @search="setSearchText" @filter-click="setFilterType" />
+        <AppList :data="filteredDate" />
+      </div>
+      <AppLoading></AppLoading>
     </div>
     <AppForm />
  </div>
@@ -14,6 +17,7 @@ import AppHeader from '@/components/AppHeader'
 import AppFilter from '@/components/AppFilter'
 import AppForm from '@/components/AppForm'
 import AppList from '@/components/AppList'
+import AppLoading from '@/components/AppLoading'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
 export default {
@@ -21,7 +25,8 @@ export default {
     AppHeader,
     AppFilter,
     AppForm,
-    AppList
+    AppList,
+    AppLoading
   },
   setup (props) {
     const store = useStore()

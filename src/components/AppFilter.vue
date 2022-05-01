@@ -36,10 +36,6 @@ export default {
     const clickFilterItem = (tab) => {
       context.emit('filter-click', tab.type)
     }
-    // onMounted(() => {
-    //   console.log('mounted')
-    // })
-    // const name = toRef(formData, 'name')
     return {
       tabs,
       // activeTabTypes,
