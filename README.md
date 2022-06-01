@@ -1,3 +1,5 @@
+В качеестве бека использовался FIREBASE (REALTIME DATABASE)
+
 # vue-todo
 
 ## Project setup
