@@ -1,4 +1,4 @@
-FIREBASE (REALTIME DATABASE)
+Использовал FIREBASE (REALTIME DATABASE) для хранения айтемов
 
 # vue-todo
 
