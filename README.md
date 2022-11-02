@@ -1,4 +1,4 @@
-В качеестве бека использовался FIREBASE (REALTIME DATABASE)
+FIREBASE (REALTIME DATABASE)
 
 # vue-todo
 
